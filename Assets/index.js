@@ -3,11 +3,11 @@ var locations = []
 
 var searchForm = document.getElementById('city-search-form')
 var searchInput = document.getElementById('city')
+var primaryBtn = document.querySelector('.btn-primary')
 var currentConditionsEl = document.getElementById('current-conditions-container')
 var currentConditionsContainer = document.getElementById('current-conditions-container')
 var fiveDayForecastContainer = document.getElementById('five-day-forecast')
 var pastSearchesButton = document.getElementById('past-searches')
-var primaryBtn = document.querySelector('.btn-primary')
 
 function submitForm (event){
     event.preventDefault();
@@ -168,5 +168,5 @@ var pastSearches = function(){
 }
 
 window.onload = function(){
-    searchForm.addEventListener('submit', submitForm);
+   primaryBtn.addEventListener('submit', submitForm);
 }
