@@ -9,15 +9,16 @@ var currentConditionsContainer = document.getElementById('current-conditions-con
 var fiveDayForecastContainer = document.getElementById('five-day-forecast')
 var pastSearchesButton = document.getElementById('past-searches')
 
-var savedSearches = window.localStorage.setItem('searchInput', JSON.stringify(searchInput));
-
 function submitForm (event){
     event.preventDefault();
     input = searchInput.value;
     console.log(input);
-
-    savedSearches();
 }
+
+var savedSearches = function(){
+    window.localStorage.setItem('searchInput', JSON.stringify(searchInput));
+}
+savedSearches();
 
 // Fetches current weather conditions for specified location
 // var currentConditions = function(){
