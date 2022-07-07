@@ -14,3 +14,7 @@ nav {
 .btn-primary {
     padding: 15px 15px 15px 15px;
 }
+
+.list-item {
+    line-height: 1px;
+}
