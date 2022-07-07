@@ -9,17 +9,14 @@ var currentConditionsContainer = document.getElementById('current-conditions-con
 var fiveDayForecastContainer = document.getElementById('five-day-forecast')
 var pastSearchesButton = document.getElementById('past-searches')
 
+var savedSearches = window.localStorage.setItem('searchInput', JSON.stringify(searchInput));
+
 function submitForm (event){
     event.preventDefault();
-    input = searchInput.val();
+    input = searchInput.value;
     console.log(input);
 
     savedSearches();
-    pastSearches(cityName);
-
-    var savedSearches = function() {
-        localStorage.setItem('locations', JSON.stringify(locations));
-    }
 }
 
 // Fetches current weather conditions for specified location
@@ -163,10 +160,10 @@ var showfiveDayForecast = function(weather){
 }
 
 // Function to display past searches
-var pastSearches = function(){
-    localStorage.getItem('locations', JSON.stringify(locations))
-}
+// function displaySearches(){
+    window.localStorage.getItem('searchInput', JSON.stringify(searchInput))
+// }
 
 window.onload = function(){
-   primaryBtn.addEventListener('submit', submitForm);
+   primaryBtn.addEventListener('click', submitForm);
 }
