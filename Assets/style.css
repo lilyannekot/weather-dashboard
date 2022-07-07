@@ -2,6 +2,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+    --UVpadding: 5px;
+}
+
 nav {
     text-align: center;
     font-size: 45px;
@@ -15,6 +19,40 @@ nav {
     padding: 15px 15px 15px 15px;
 }
 
+#current-conditions {
+
+}
+
 .list-item {
     line-height: 1px;
+}
+
+.low {
+    padding: var(--UVpadding);
+    background-color: green;
+    color: black;
+}
+
+.moderate {
+    padding: var(--UVpadding);
+    background-color: yellow;
+    color: black;
+}
+
+.high {
+    padding: var(--UVpadding);
+    background-color: orange;
+    color: white;
+}
+
+.very-high {
+    padding: var(--UVpadding);
+    background-color: red;
+    color: white;
+}
+
+.extreme {
+    padding: var(--UVpadding);
+    background-color: rgb(53, 11, 74);
+    color: white;
 }
